@@ -3,13 +3,12 @@ const mongoose = require("mongoose");
 const dbConnection = async() =>{
 
     try{
-        await mongoose.connect('mongodb+srv://secondUser:ulPuGSxgYfxGQPVj@cluster0.bx7ng.mongodb.net/plotUsers'),{
+        await mongoose.connect('mongodb+srv://secondUser:ulPuGSxgYfxGQPVj@cluster0.bx7ng.mongodb.net/plotUsers',
+        {
             useNewUrlParser: true,
-            useUnifiedTopology:true,
-            useCreateIndex: true
-        
-            };
-
+            useUnifiedTopology:true
+            //useCreateIndex: true
+            });
         console.log("Database working")
 
     }
